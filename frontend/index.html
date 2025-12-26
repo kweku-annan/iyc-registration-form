@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Register for IYC Conference - Join us for an inspiring gathering of youth in Christ">
+    <title>IYC Conference Registration</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="assets/images/logo.png" alt="Organization Logo" class="logo" id="logo">
+                <div class="header-title">
+                    <h1>IYC Conference 2025</h1>
+                    <p style="margin: 0; color: var(--gold-accent); font-size: 1.1rem; font-weight: 600;">🔥 Holy Spirit
+                        Invasion 🔥</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Slideshow -->
+        <section class="hero-slideshow" id="slideshow">
+            <div class="slide active">
+                <img src="assets/images/slideshow/slide1.jpg" alt="IYC Conference Image 1">
+                <div class="slide-overlay">
+                    <h2>Welcome to IYC Conference</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/slideshow/slide2.jpg" alt="IYC Conference Image 2">
+                <div class="slide-overlay">
+                    <h2>Experience Powerful Worship</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/slideshow/slide3.jpg" alt="IYC Conference Image 3">
+                <div class="slide-overlay">
+                    <h2>Inspiring Messages</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/slideshow/slide4.jpg" alt="IYC Conference Image 4">
+                <div class="slide-overlay">
+                    <h2>Connect & Network</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/slideshow/slide5.jpg" alt="IYC Conference Image 5">
+                <div class="slide-overlay">
+                    <h2>Join the Movement</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/slideshow/slide6.jpg" alt="IYC Conference Image 6">
+                <div class="slide-overlay">
+                    <h2>Growing Together</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/slideshow/slide7.jpg" alt="IYC Conference Image 7">
+                <div class="slide-overlay">
+                    <h2>God's Presence</h2>
+                </div>
+            </div>
+
+            <!-- Slideshow Controls -->
+            <div class="slideshow-controls">
+                <button class="control-btn" id="prevBtn" aria-label="Previous slide">❮ Prev</button>
+                <div class="slide-dots" id="slideDots"></div>
+                <button class="control-btn" id="nextBtn" aria-label="Next slide">Next ❯</button>
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section class="section container">
+            <div class="section-title">
+                <h2>Conference Registration</h2>
+                <p style="color: var(--text-medium);">Join us for <strong style="color: var(--gold-accent);">Holy Spirit
+                        Invasion</strong> • December 24-27, 2025</p>
+            </div>
+
+            <!-- Alert Container -->
+            <div id="alertContainer"></div>
+
+            <!-- Registration Form -->
+            <form id="registrationForm" class="registration-form" novalidate>
+                <!-- Full Name (Required) -->
+                <div class="form-group">
+                    <label for="fullName" class="form-label">
+                        Full Name <span class="required-mark">*</span>
+                    </label>
+                    <input type="text" id="fullName" name="full_name" class="form-input"
+                        placeholder="Enter your full name" required aria-required="true">
+                    <div class="error-message" id="fullNameError"></div>
+                </div>
+
+                <!-- Phone Number (Optional) -->
+                <div class="form-group">
+                    <label for="phone" class="form-label">
+                        Phone Number
+                    </label>
+                    <input type="tel" id="phone" name="phone" class="form-input"
+                        placeholder="0241234567 or +233241234567 (optional)">
+                    <span class="form-helper">Ghana phone format: 0XXXXXXXXX or +233XXXXXXXXX</span>
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+
+                <!-- Church (Required) -->
+                <div class="form-group">
+                    <label for="church" class="form-label">
+                        Church <span class="required-mark">*</span>
+                    </label>
+                    <input type="text" id="church" name="church" class="form-input" placeholder="Enter your church name"
+                        required aria-required="true">
+                    <div class="error-message" id="churchError"></div>
+                </div>
+
+                <!-- Institution (Optional) -->
+                <div class="form-group">
+                    <label for="institution" class="form-label">
+                        Institution / School
+                    </label>
+                    <input type="text" id="institution" name="institution" class="form-input"
+                        placeholder="Enter your school or institution name (optional)">
+                    <div class="error-message" id="institutionError"></div>
+                </div>
+
+                <!-- City/Location (Required) -->
+                <div class="form-group">
+                    <label for="city" class="form-label">
+                        City / Location <span class="required-mark">*</span>
+                    </label>
+                    <input type="text" id="city" name="city" class="form-input"
+                        placeholder="Enter your city or location" required aria-required="true">
+                    <div class="error-message" id="cityError"></div>
+                </div>
+
+                <!-- Leader/Inviter (Optional) -->
+                <div class="form-group">
+                    <label for="leader" class="form-label">
+                        Who Invited You / Leader
+                    </label>
+                    <input type="text" id="leader" name="leader" class="form-input"
+                        placeholder="Enter the name of your leader or who invited you (optional)">
+                    <div class="error-message" id="leaderError"></div>
+                </div>
+
+                <!-- Email (Optional) -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input"
+                        placeholder="your.email@example.com (optional)">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <!-- Preferred Contact Method (Optional) -->
+                <div class="form-group">
+                    <label for="contactMethod" class="form-label">Preferred Contact Method</label>
+                    <select id="contactMethod" name="contact_method" class="form-select">
+                        <option value="">Select preferred method (optional)</option>
+                        <option value="Phone">Phone</option>
+                        <option value="Email">Email</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                    </select>
+                </div>
+
+                <!-- First-Time Attendee (Optional) -->
+                <div class="form-group">
+                    <label class="form-label">First-Time Attendee?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="firstTimeYes" name="first_time_attendee" value="Yes">
+                            <label for="firstTimeYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="firstTimeNo" name="first_time_attendee" value="No">
+                            <label for="firstTimeNo">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prayer Request (Optional) -->
+                <div class="form-group">
+                    <label for="prayerRequest" class="form-label">Prayer Request</label>
+                    <textarea id="prayerRequest" name="prayer_request" class="form-textarea"
+                        placeholder="Share any prayer request you have (optional)" maxlength="500"></textarea>
+                    <span class="form-helper">Maximum 500 characters</span>
+                </div>
+
+                <!-- Privacy Notice -->
+                <div class="privacy-notice">
+                    <p><strong>Privacy Notice:</strong></p>
+                    <p>Your information will be shared only with internal leaders of our organization and will be used
+                        for contacting and networking purposes only. We respect your privacy and will not share your
+                        data with third parties.</p>
+                </div>
+
+                <!-- Privacy Consent (Required) -->
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="privacyConsent" name="privacy_consent" required aria-required="true">
+                        <label for="privacyConsent">
+                            <strong>I agree to the data collection and privacy terms</strong> <span
+                                class="required-mark">*</span>
+                        </label>
+                    </div>
+                    <div class="error-message" id="consentError"></div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Register Now
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <h3>Connect With Us</h3>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/int.youthforchrist" id="facebookLink" class="social-link"
+                    aria-label="Facebook" target="_blank" rel="noopener">
+                    <img src="assets/icons/icons8-facebook-96.png" alt="Facebook" style="width: 30px; height: 30px;">
+                </a>
+                <a href="https://www.youtube.com/@Int.YouthForChrist" id="youtubeLink" class="social-link"
+                    aria-label="YouTube" target="_blank" rel="noopener">
+                    <img src="assets/icons/icons8-youtube-96.png" alt="YouTube" style="width: 30px; height: 30px;">
+                </a>
+            </div>
+
+            <p>&copy; 2025 IYC Conference. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

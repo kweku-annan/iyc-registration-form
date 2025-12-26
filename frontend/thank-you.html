@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for registering for IYC Conference">
+    <title>Registration Successful - IYC Conference</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="assets/images/logo.png" alt="Organization Logo" class="logo">
+                <div class="header-title">
+                    <h1>IYC Conference 2025</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="container" style="padding: var(--spacing-2xl) 0;">
+            <div class="success-message">
+                <div class="success-icon">✓</div>
+                <h2 style="color: var(--bronze-dark); margin-bottom: var(--spacing-md);">Registration Successful!</h2>
+                <h3 id="welcomeMessage">Welcome, Attendee!</h3>
+                <p style="font-size: 1.1rem; margin: var(--spacing-lg) 0; color: var(--text-dark);">
+                    Thank you for registering for IYC Conference 2025. Your registration has been confirmed and you
+                    should receive an SMS confirmation shortly.
+                </p>
+
+                <!-- Conference Details -->
+                <div
+                    style="background: rgba(249, 203, 115, 0.1); border: 2px solid var(--gold-accent); padding: var(--spacing-lg); border-radius: var(--radius-lg); margin: var(--spacing-xl) 0;">
+                    <h3 style="color: var(--bronze-dark); margin-bottom: var(--spacing-md);">Conference Details</h3>
+                    <p style="color: var(--text-dark); margin-bottom: var(--spacing-sm);"><strong>Theme:</strong> Holy
+                        Spirit Invasion</p>
+                    <p style="color: var(--text-dark); margin-bottom: var(--spacing-sm);"><strong>Date:</strong> 24th -
+                        27th December 2025</p>
+                    <p style="color: var(--text-dark); margin-bottom: var(--spacing-sm);"><strong>Location:</strong> The
+                        Prayer City, Apam Junction</p>
+                </div>
+
+                <!-- WhatsApp Group Link -->
+                <div style="margin: var(--spacing-xl) 0;">
+                    <h3 style="color: var(--bronze-dark); margin-bottom: var(--spacing-md);">Join Our Community</h3>
+                    <p style="color: var(--text-dark); margin-bottom: var(--spacing-md);">Stay connected and get updates
+                        about the conference!
+                    </p>
+                    <a href="https://chat.whatsapp.com/FYrTrtWZhi550WLqgygM5p" target="_blank" rel="noopener"
+                        id="whatsappLink" class="submit-btn"
+                        style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; max-width: 400px; margin: 0 auto;">
+                        <span style="font-size: 1.5rem;">📱</span> Join WhatsApp Group
+                    </a>
+                </div>
+
+                <!-- Social Media -->
+                <div style="margin: var(--spacing-xl) 0;">
+                    <h3 style="color: var(--bronze-dark); margin-bottom: var(--spacing-md);">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/int.youthforchrist" id="facebookLink" class="social-link"
+                            aria-label="Facebook" target="_blank" rel="noopener">
+                            <img src="assets/icons/icons8-facebook-96.png" alt="Facebook"
+                                style="width: 30px; height: 30px;">
+                        </a>
+                        <a href="https://www.youtube.com/@Int.YouthForChrist" id="youtubeLink" class="social-link"
+                            aria-label="YouTube" target="_blank" rel="noopener">
+                            <img src="assets/icons/icons8-youtube-96.png" alt="YouTube"
+                                style="width: 30px; height: 30px;">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Register Another Person -->
+                <div
+                    style="margin-top: var(--spacing-xl); padding-top: var(--spacing-xl); border-top: 2px solid var(--gold-accent);">
+                    <p style="color: var(--text-dark);">Need to register another person?</p>
+                    <a href="index.html"
+                        style="color: var(--bronze-dark); text-decoration: none; font-weight: 600; font-size: 1.1rem;">
+                        ← Register Another Person
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 IYC Conference. All rights reserved.</p>
+            <p style="margin-top: var(--spacing-sm); color: rgba(255, 255, 255, 0.9);">
+                We look forward to seeing you at the conference!
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to handle URL parameters -->
+    <script>
+        // Get attendee name from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const attendeeName = urlParams.get('name') || 'Attendee';
+
+        // Update welcome message
+        document.getElementById('welcomeMessage').textContent = `Welcome, ${attendeeName}!`;
+
+        // Load configuration from environment or set defaults
+        const whatsappLink = 'https://chat.whatsapp.com/FYrTrtWZhi550WLqgygM5p';
+        const facebookUrl = 'https://www.facebook.com/int.youthforchrist';
+        const youtubeUrl = 'https://www.youtube.com/@Int.YouthForChrist';
+
+        // Set links
+        document.getElementById('whatsappLink').href = whatsappLink;
+        document.getElementById('facebookLink').href = facebookUrl;
+        document.getElementById('youtubeLink').href = youtubeUrl;
+
+        // Log for debugging
+        console.log('Thank you page loaded for:', attendeeName);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: iyc-registration-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: GOOGLE_SHEETS_CREDENTIALS_PATH
+        sync: false
+      - key: GOOGLE_SHEET_ID
+        sync: false
+      - key: MNOTIFY_API_KEY
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: CONFERENCE_NAME
+        value: IYC Conference 2025
+      - key: WHATSAPP_GROUP_LINK
+        sync: false
+      - key: FACEBOOK_URL
+        sync: false
+      - key: YOUTUBE_URL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
