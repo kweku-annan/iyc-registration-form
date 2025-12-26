@@ -6,10 +6,10 @@
 // Configuration
 // Automatically uses correct API URL based on environment
 const CONFIG = {
-    // Use localhost for development, production URL for deployed frontend
+    // Use localhost for development, relative path for production
     apiUrl: window.location.hostname === 'localhost'
         ? 'http://localhost:8000/api'
-        : 'https://iyc-registration-form.onrender.com/api',  // NO trailing slash!
+        : '/api',  // Relative path - works when frontend and backend are on same domain
     slideInterval: 5000, // 5 seconds
 };
 
