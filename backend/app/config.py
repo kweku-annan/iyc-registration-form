@@ -38,7 +38,8 @@ class Settings(BaseSettings):
         "http://localhost:8000",
         "http://127.0.0.1:8000",
         "http://localhost:3000",  # Common dev server port
-        "https://iyc-2025-registration-form.vercel.app/"
+        "https://127.0.0.1:3000",
+        "https://iyc-2025-registration-form.vercel.app"  # NO trailing slash!
     ]
 
     model_config = SettingsConfigDict(

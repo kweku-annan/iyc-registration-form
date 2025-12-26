@@ -7,10 +7,9 @@
 // Automatically uses correct API URL based on environment
 const CONFIG = {
     // Use localhost for development, production URL for deployed frontend
-    // UPDATE THIS after deploying backend to Render
     apiUrl: window.location.hostname === 'localhost'
         ? 'http://localhost:8000/api'
-        : 'https://iyc-registration-form.onrender.com/',  // Replace with your Render URL
+        : 'https://iyc-registration-form.onrender.com/api',  // NO trailing slash!
     slideInterval: 5000, // 5 seconds
 };
 
