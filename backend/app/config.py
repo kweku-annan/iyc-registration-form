@@ -29,18 +29,18 @@ class Settings(BaseSettings):
     facebook_url: str
     youtube_url: str
     frontend_url: str = "http://localhost:8000"
-    
+
     # Frontend Configuration
     frontend_path: str = "../frontend"
-    
+
     # CORS Configuration
     allowed_origins: list[str] = [
-        "http://localhost:8000", 
+        "http://localhost:8000",
         "http://127.0.0.1:8000",
         "http://localhost:3000",  # Common dev server port
-        "http://127.0.0.1:3000"
+        "https://iyc-2025-registration-form.vercel.app/"
     ]
-    
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
