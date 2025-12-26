@@ -10,7 +10,7 @@ const CONFIG = {
     // UPDATE THIS after deploying backend to Render
     apiUrl: window.location.hostname === 'localhost'
         ? 'http://localhost:8000/api'
-        : 'https://YOUR-BACKEND-NAME.onrender.com/api',  // Replace with your Render URL
+        : 'https://iyc-registration-form.onrender.com/',  // Replace with your Render URL
     slideInterval: 5000, // 5 seconds
 };
 
