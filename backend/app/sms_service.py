@@ -86,11 +86,6 @@ class SMSService:
                 f"Hello {first_name.upper()}!\n\n"
                 f"Thank you for registering for {settings.conference_name}! "
                 f"Your registration is confirmed.\n\n"
-                f"Theme: Holy Spirit Invasion\n"
-                f"Date: 24-27 Dec 2025\n"
-                f"Location: The Prayer City, Apam Junction\n\n"
-                f"Join WhatsApp: {settings.whatsapp_group_link}\n\n"
-                f"God bless you!"
             )
             
             # Prepare mNotify API request
