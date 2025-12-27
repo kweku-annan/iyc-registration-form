@@ -33,7 +33,7 @@ def sanitize_input(text: str) -> str:
     return sanitized
 
 
-@router.post("register", response_model=RegistrationResponse)
+@router.post("/register", response_model=RegistrationResponse)
 @limiter.limit("5/minute")  # Max 5 registrations per minute per IP
 async def register_attendee(request: Request, registration: RegistrationRequest):
     """
